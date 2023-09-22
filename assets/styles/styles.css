@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   color: white;
 }
 
@@ -18,5 +18,21 @@ body {
 }
 
 .star {
-  
+  display: inline-block;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  margin: 0 5px;
+  z-index: 100;
+  opacity: 0; /* Imposta l'opacità iniziale a 0 */
+  transition: opacity 0.5s ease ; /* Aggiungi un'animazione di fading */
+}
+
+.star.show {
+  opacity: 1; /* Imposta l'opacità a 1 quando la classe "show" è presente */
+}
+
+.star.remove {
+  opacity: 0; /* Imposta l'opacità a 0 per l'animazione di scomparsa */
+  transition: opacity 0.5s ease; /* Aggiungi un'animazione di fading per la scomparsa */
 }
