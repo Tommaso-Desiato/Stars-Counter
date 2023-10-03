@@ -2,22 +2,25 @@ let counter = 0;
 const counterContainer = document.getElementById("counter-container");
 const starContainer = document.getElementById("star-container");
 
-
-const btnPlus = document.createElement("button");
-btnPlus.innerHTML = "+";
-counterContainer.appendChild(btnPlus);
+const plusButton = createButton("+", incrementCounter);
 
 const display = document.createElement("div");
 display.innerText = counter;
+display.id = "counter";
 counterContainer.appendChild(display);
 
-btnPlus.addEventListener("click", incrementCounter);
 
-const btnMinus = document.createElement("button");
-btnMinus.innerHTML = "-";
-counterContainer.appendChild(btnMinus);
+const minusButton = createButton("-", decrementCounter);
 
-btnMinus.addEventListener("click", decrementCounter);
+//Funzione creata per non ripetere codice
+function createButton(text, clickHandler) {
+  const button = document.createElement("button");
+  button.innerHTML = text;
+  button.addEventListener("click", clickHandler);
+  button.classList.add("button");
+  counterContainer.appendChild(button);
+  return button;
+}
 
 function incrementCounter() {
   counter++;
@@ -64,6 +67,6 @@ function removeStar() {
       stars[stars.length - 1].classList.add("remove");
       setTimeout(function() {
           starContainer.removeChild(stars[stars.length - 1]);
-      }, 500); // Dopo che l'animazione è completata (0.5 secondi), rimuovi la stella
+      }, 500);
   }
 }

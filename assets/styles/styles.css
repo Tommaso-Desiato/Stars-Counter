@@ -7,32 +7,95 @@
 body {
   background-color: rgb(0, 0, 0);
   color: white;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#title {
+  text-align: center;
+  margin-top: 20px;
 }
 
 #counter-container {
-  background-color: red;
-  color: white;
+  background-color: #4CAF50;
+  padding: 50px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: auto;
+  margin-top: 50vh;
+  width: 50%;
+  text-align: center;
+  font-weight: 200;
+  position: relative;
+}
+.scanline {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 2px; 
+  background: repeating-linear-gradient(0deg, transparent, transparent 4px, rgba(255, 255, 255, 0.1) 4px, rgba(255, 255, 255, 0.1) 6px); 
+}
+
+#counter{
+  color: black;
+  font-size: 40px;
+}
+
+.button {
+  font-family: monospace;
+  font-size: 40px;
+  background-color: black;
+  color: #4CAF50; 
+  cursor: pointer;
+  padding: 15px 25px;
+  border: 2px solid black;
+}
+
+button:hover {
+  background-color: #4CAF50;
+  color: black;
 }
 
 .star {
-  display: inline-block;
   position: absolute;
   width: 32px;
   height: 32px;
-  margin: 0 5px;
-  z-index: 100;
-  opacity: 0; /* Imposta l'opacità iniziale a 0 */
-  transition: opacity 0.5s ease ; /* Aggiungi un'animazione di fading */
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease ; 
 }
 
 .star.show {
-  opacity: 1; /* Imposta l'opacità a 1 quando la classe "show" è presente */
+  opacity: 1; 
 }
 
 .star.remove {
-  opacity: 0; /* Imposta l'opacità a 0 per l'animazione di scomparsa */
-  transition: opacity 0.5s ease; /* Aggiungi un'animazione di fading per la scomparsa */
+  opacity: 0;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#footer a {
+  text-decoration: none;
+  color: white;
+}
+
+@media  (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  #counter {
+    font-size: 30px;
+  }
+
+  .button {
+    font-size: 30px;
+    padding: 10px 20px;
+  }
 }
