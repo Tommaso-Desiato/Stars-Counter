@@ -26,7 +26,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Tommaso-Desiato/stars-counter">
-    <img src="assets/img/sparkling.png" alt="Logo" width="80" height="80">
+    <img src="assets/img/sparkling.png" alt="Logo" width="32" height="32">
   </a>
 
 <h3 align="center">Stars Counter</h3>
@@ -34,7 +34,7 @@
   <p align="center">
     This is a simple counter created with HTML,CSS and Javascript.
     <br />
-    <a href="https://github.com/Tommaso-Desiato/stars-counter">View Demo</a>
+    <a href="https://tommaso-desiato.github.io/Stars-Counter/">View Demo</a>
     
   </p>
 </div>
@@ -51,19 +51,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
 
@@ -81,17 +69,10 @@ This is a simple counter created with HTML,CSS and Javascript. If you press the 
 
 
 ### Built With
-* <img= src="{https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white}">
-* <img= src="{https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white}">
-* <img= src="{https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E}">
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+*![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+* ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+*![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
