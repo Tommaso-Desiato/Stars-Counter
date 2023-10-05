@@ -2,15 +2,17 @@ let counter = 0;
 const counterContainer = document.getElementById("counter-container");
 const starContainer = document.getElementById("star-container");
 
-const plusButton = createButton("+", incrementCounter);
+const minusButton = createButton("-", decrementCounter);
 
 const display = document.createElement("div");
 display.innerText = counter;
 display.id = "counter";
 counterContainer.appendChild(display);
 
+const plusButton = createButton("+", incrementCounter);
 
-const minusButton = createButton("-", decrementCounter);
+const resetButton = createButton("Reset", resetCounter);
+
 
 //Funzione creata per non ripetere codice
 function createButton(text, clickHandler) {
@@ -40,6 +42,26 @@ function updateCounter() {
   display.innerText = counter;
 };
 
+function resetCounter() {
+  counter = 0;
+  updateCounter();
+
+  const stars = starContainer.getElementsByClassName("star");
+   // Funzione per rimuovere le stelle una alla volta
+   function removeStar() {
+    if (stars.length > 0) {
+      const starToRemove = stars[0];
+      starToRemove.classList.add("remove");
+      setTimeout(function () {
+        starContainer.removeChild(starToRemove);
+        removeStar(); 
+      }, 200); // Dopo 0.2 secondi rimuove la stella successiva
+    }
+  }
+
+  removeStar();
+}
+
 function createStar() {
   let star = document.createElement("span");
   star.classList.add("star");
@@ -64,7 +86,7 @@ function createStar() {
 function removeStar() {
   let stars = starContainer.getElementsByClassName("star");
   if (stars.length > 0) {
-      stars[stars.length - 1].classList.add("remove");
+    stars[stars.length - 1].classList.add("remove");
       setTimeout(function() {
           starContainer.removeChild(stars[stars.length - 1]);
       }, 500);
