@@ -7,7 +7,7 @@
 body {
   color: white;
   font-family: 'Roboto Mono', monospace;
-  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url("/assets/img/starry-sky.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url("../assets/img/starry-sky.jpg");
   background-size: cover;
 }
 
